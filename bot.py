@@ -4,9 +4,14 @@ from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, Con
 from PIL import Image
 import imageio
 import asyncio
+from dotenv import load_dotenv
 
-# TOKENni Render environment variable orqali olamiz
-TOKEN = os.getenv("BOT_TOKEN")
+load_dotenv()  # .env faylni yuklaydi
+TOKEN = os.getenv("TOKEN")
+
+from telegram.ext import ApplicationBuilder
+
+app = ApplicationBuilder().token(TOKEN).build()
 
 
 def make_zoom_gif(image_path, output_path):
