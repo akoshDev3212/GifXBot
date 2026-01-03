@@ -1,3 +1,5 @@
 python-telegram-bot==20.4
+yt-dlp
+imageio
 requests
 Pillow
